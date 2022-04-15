@@ -1,5 +1,6 @@
 @use "~normalize.css" as *;
-@use "./assets/css/shared";
+@use "./assets/css/core";
+@use "./assets/css/directives";
 
 body {
   background-color: var(--color-black-dark);
