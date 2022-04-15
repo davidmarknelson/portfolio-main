@@ -1,0 +1,42 @@
+.hero {
+  height: 95vh;
+  position: relative;
+
+  &__title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    z-index: 3;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  &__subtitle {
+    z-index: 3;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  &__item {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+  &__1 {
+    background-image: url("../../../assets/images/hero/circles.png");
+  }
+  &__2 {
+    background-image: url("../../../assets/images/hero/crosses.png");
+  }
+  &__3 {
+    background-image: url("../../../assets/images/hero/triangles.png");
+  }
+}
