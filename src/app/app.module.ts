@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeroComponent } from './components/hero/hero.component';
-import { DnButtonDirective } from './shared/directives/dn-button/dn-button.directive';
+import { HeroComponent, NavbarComponent } from './partials';
+import { ContainerComponent, DividerComponent } from './shared/components';
+import { DnButtonDirective } from './shared/directives';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HeroComponent, DnButtonDirective],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HeroComponent,
+    DnButtonDirective,
+    DividerComponent,
+    ContainerComponent,
+  ],
+  imports: [BrowserModule, FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

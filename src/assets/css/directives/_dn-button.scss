@@ -8,31 +8,28 @@
   border: none;
   outline: none;
 
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-primary);
+  color: var(--color-black);
 
   &:hover,
   &:active,
   &:focus {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-light);
     color: var(--color-black);
   }
 
   &--secondary {
-    background-color: var(--color-primary);
-    color: var(--color-black);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    -webkit-box-shadow: 0px 0px 15px 0px var(--color-gray-dark);
+    -moz-box-shadow: 0px 0px 15px 0px var(--color-gray-dark);
+    box-shadow: 0px 0px 15px 0px var(--color-gray-dark);
 
     &:hover,
     &:active,
     &:focus {
-      background-color: var(--color-primary-light);
+      background-color: var(--color-primary);
       color: var(--color-black);
     }
-  }
-
-  &--shadow {
-    -webkit-box-shadow: 0px 0px 15px 0px var(--color-gray-dark);
-    -moz-box-shadow: 0px 0px 15px 0px var(--color-gray-dark);
-    box-shadow: 0px 0px 15px 0px var(--color-gray-dark);
   }
 }

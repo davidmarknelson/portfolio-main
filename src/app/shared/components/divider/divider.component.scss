@@ -1,0 +1,15 @@
+.divider {
+  border-bottom: 1px solid var(--color-white);
+  height: 0.8rem;
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+
+  &__text {
+    background: var(--color-black-dark);
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    color: var(--color-primary);
+    display: inline;
+  }
+}

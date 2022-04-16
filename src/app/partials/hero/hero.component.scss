@@ -40,3 +40,12 @@
     background-image: url("../../../assets/images/hero/triangles.png");
   }
 }
+
+.arrow-down {
+  display: flex;
+  justify-content: center;
+
+  & a {
+    color: var(--color-primary);
+  }
+}
