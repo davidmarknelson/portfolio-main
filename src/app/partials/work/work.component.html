@@ -1,0 +1,11 @@
+<h3 class="title">
+  {{work.title}}
+</h3>
+<p class="subtitle" *ngFor="let subtitleItem of work.subtitle">
+  {{subtitleItem}}
+</p>
+<ul class="experience">
+  <li *ngFor="let experienceItem of work.experience">
+    {{experienceItem}}
+  </li>
+</ul>

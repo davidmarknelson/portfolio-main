@@ -1,0 +1,70 @@
+@use "../../../../assets/css/core" as *;
+
+:host {
+  position: relative;
+}
+
+.carousel {
+  overflow-x: hidden;
+}
+
+.direction-btn {
+  position: absolute;
+  top: 45%;
+  background-color: transparent;
+  color: $color-primary;
+  border: none;
+  cursor: pointer;
+
+  &.left {
+    left: 4px;
+  }
+
+  &.right {
+    right: 4px;
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  list-style-type: none;
+
+  & button {
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    background: $color-gray-light;
+    cursor: pointer;
+
+    &.active {
+      background: $color-primary;
+    }
+  }
+}
+
+figure {
+  display: block;
+  position: relative;
+  padding-top: 75%;
+  border-radius: $border-radius;
+  width: 100%;
+  margin: 0;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: $border-radius;
+  object-fit: cover;
+}

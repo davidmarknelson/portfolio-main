@@ -1,0 +1,10 @@
+@use "../../../assets/css/core" as *;
+
+.title {
+  color: $color-white;
+}
+
+.subtitle,
+.experience {
+  color: $color-gray-light;
+}

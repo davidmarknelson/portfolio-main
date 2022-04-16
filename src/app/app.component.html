@@ -2,8 +2,14 @@
 <main>
   <dn-hero></dn-hero>
   <dn-container>
-    <dn-divider>
+    <dn-divider id="work">
       Work
     </dn-divider>
+    <dn-work [work]="workAlpine"></dn-work>
+
+    <dn-divider id="projects">
+      Projects
+    </dn-divider>
+    <dn-project [images]="projectImageSfr2"></dn-project>
   </dn-container>
 </main>

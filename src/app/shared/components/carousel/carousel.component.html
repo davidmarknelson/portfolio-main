@@ -1,0 +1,23 @@
+<div class="carousel">
+  <div fxLayout="row">
+    <figure *ngFor="let image of images; let i = index; let last = last"
+      [ngStyle]="{ 'margin-right': last ? '-' + i * 100 + '%' : null }" [attr.aria-hidden]="currentIndex !== i">
+      <img #img [src]="image.src" [alt]="image.alt" />
+    </figure>
+  </div>
+</div>
+
+<button class="direction-btn left" (click)="scroll('left')" aria-label="View previous image">
+  <fa-icon [icon]="faChevronLeft" size="2x"></fa-icon>
+</button>
+
+<button class="direction-btn right" (click)="scroll('right')" aria-label="View next image">
+  <fa-icon [icon]="faChevronRight" size="2x"></fa-icon>
+</button>
+
+<ul class="dots" fxLayout="row" fxLayoutAlign="center center">
+  <li>
+    <button *ngFor="let image of images; let i = index" (click)="scrollToIndex(i)"
+      [attr.aria-current]="currentIndex === i" [class.active]="currentIndex === i"></button>
+  </li>
+</ul>
