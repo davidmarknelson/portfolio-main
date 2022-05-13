@@ -1,6 +1,7 @@
 @use "~normalize.css" as *;
 @use "./assets/css/core";
 @use "./assets/css/directives";
+@import "~@angular/cdk/overlay-prebuilt.css";
 
 html {
   scroll-behavior: smooth;

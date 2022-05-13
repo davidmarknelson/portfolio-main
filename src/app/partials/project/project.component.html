@@ -1,3 +1,23 @@
-<div gdColumns="repeat(2, 1fr)" gdGap="4rem" gdColumns.lt-sm="repeat(1, 1fr)">
-  <dn-carousel [images]="images"></dn-carousel>
-</div>
+<section>
+  <div class="title">
+    <h3>{{data.title}}</h3>
+    <p>{{data.subtitle}}</p>
+  </div>
+
+  <div gdColumns="repeat(2, 1fr)" gdGap="4rem" gdColumns.lt-md="repeat(1, 1fr)">
+    <dn-carousel [images]="images" [title]="data.title"></dn-carousel>
+
+    <div class="features" fxLayout="column">
+      <ng-container *ngFor="let feature of data.features">
+        <h4>
+          {{feature.title}}
+        </h4>
+        <p>{{feature.info}}</p>
+      </ng-container>
+    </div>
+  </div>
+  <div class="actions" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+    <a *ngFor="let action of data.actions" [href]="action.href" [attr.aria-label]="action.ariaLabel" target="_blank"
+      dnButton>{{action.text}}</a>
+  </div>
+</section>

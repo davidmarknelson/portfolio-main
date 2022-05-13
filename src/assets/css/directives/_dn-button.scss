@@ -6,6 +6,7 @@
   text-align: center;
   border: none;
   outline: none;
+  cursor: pointer;
 
   background-color: var(--color-primary);
   color: var(--color-black);
@@ -30,5 +31,9 @@
       background-color: var(--color-primary);
       color: var(--color-black);
     }
+  }
+
+  &--icon {
+    min-width: unset;
   }
 }

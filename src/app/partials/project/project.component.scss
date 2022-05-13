@@ -1,0 +1,34 @@
+@use "/src/assets/css/core" as *;
+
+section {
+  background-color: $color-black-light;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  margin-bottom: 6rem;
+}
+
+.title {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  & h3 {
+    color: $color-primary;
+  }
+}
+
+.features {
+  h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: $color-gray-light;
+  }
+}
+
+.actions {
+  margin-top: 2rem;
+}

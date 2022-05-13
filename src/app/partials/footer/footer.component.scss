@@ -1,0 +1,17 @@
+@use "/src/assets/css/core" as *;
+
+.link {
+  color: $color-primary;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-light;
+  }
+}
+
+footer {
+  margin-top: 8rem;
+  background-color: $color-black-light;
+  height: 16rem;
+  text-align: center;
+}

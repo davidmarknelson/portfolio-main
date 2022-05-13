@@ -18,6 +18,11 @@
 <ul class="dots" fxLayout="row" fxLayoutAlign="center center">
   <li>
     <button *ngFor="let image of images; let i = index" (click)="scrollToIndex(i)"
-      [attr.aria-current]="currentIndex === i" [class.active]="currentIndex === i"></button>
+      [attr.aria-current]="currentIndex === i" [class.active]="currentIndex === i"
+      [attr.aria-label]="title + ' image ' + i"></button>
   </li>
 </ul>
+
+<button class="expand" dnButton (click)="open()">
+  <fa-icon [icon]="faExpand"></fa-icon>
+</button>

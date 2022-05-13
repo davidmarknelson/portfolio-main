@@ -13,9 +13,10 @@ type TButton = 'primary' | 'secondary' | 'icon' | '';
 })
 export class DnButtonDirective implements OnChanges {
   @Input() dnButton: TButton = 'primary';
-  @Input() shadow?: '' | null = null;
+  @Input() icon: boolean = false;
   @HostBinding('class.dn-button') baseClass: boolean = true;
   @HostBinding('class.dn-button--secondary') isSecondary: boolean = false;
+  @HostBinding('class.dn-button--icon') isIcon: boolean = false;
 
   ngOnChanges(changes: SimpleChanges): void {
     switch (changes['dnButton']?.currentValue as TButton) {
@@ -24,6 +25,10 @@ export class DnButtonDirective implements OnChanges {
         break;
       default:
         this.isSecondary = false;
+    }
+
+    if (changes['icon']?.currentValue as boolean) {
+      this.isIcon = changes['icon']?.currentValue as boolean;
     }
   }
 }

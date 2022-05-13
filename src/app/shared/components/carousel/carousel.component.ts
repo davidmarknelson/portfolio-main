@@ -9,7 +9,9 @@ import {
 import {
   faChevronLeft,
   faChevronRight,
+  faExpand,
 } from '@fortawesome/free-solid-svg-icons';
+import { ModalService } from '../../services/modal/modal.service';
 import { IProjectImage } from '../../types';
 
 @Component({
@@ -20,10 +22,18 @@ import { IProjectImage } from '../../types';
 })
 export class CarouselComponent {
   @Input() images!: IProjectImage[];
+  @Input() title!: string;
   @ViewChildren('img') private readonly imageElements!: QueryList<ElementRef>;
   currentIndex: number = 0;
   faChevronLeft = faChevronLeft;
   faChevronRight = faChevronRight;
+  faExpand = faExpand;
+
+  constructor(private readonly modal: ModalService) {}
+
+  open() {
+    this.modal.open(this.images);
+  }
 
   scroll(direction: 'left' | 'right'): void {
     let scrollIndex: number;

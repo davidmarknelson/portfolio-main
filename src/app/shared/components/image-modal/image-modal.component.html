@@ -1,0 +1,18 @@
+<div cdkTrapFocus cdkTrapFocusAutoCapture fxLayout="column" fxLayoutAlign="center center" class="container">
+  <div class="slideshow-container" [@fade]="index" fxLayout="column" fxLayoutAlign="center center">
+    <div #magnifier class="img-magnifier-glass" [style.backgroundImage]="'url(\'' + data[index].src + '\')'"></div>
+    <img #img [src]="data[index].src" [alt]="data[index].alt">
+    <div class="caption">{{ index + 1 }} / {{ data.length }}<span *ngIf="data[index].caption"> | {{
+        data[index].caption }}</span></div>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="1rem" class="buttons">
+    <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+      <button dnButton (click)="navigate('left')">Previous</button>
+      <button dnButton (click)="navigate('right')">Next</button>
+    </div>
+    <button dnButton [icon]="true" (click)="close()" aria-label="Close">
+      <fa-icon [icon]="faClose"></fa-icon>
+    </button>
+  </div>
+</div>

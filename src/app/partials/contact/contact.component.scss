@@ -1,0 +1,30 @@
+@use "/src/assets/css/core" as *;
+
+.contact {
+  text-align: center;
+  color: $color-gray-light;
+
+  &__icon-title {
+    text-align: center;
+  }
+
+  &__icons {
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.link {
+  color: $color-primary;
+
+  &:hover,
+  &:focus {
+    color: $color-primary-light;
+  }
+}

@@ -10,6 +10,23 @@
     <dn-divider id="projects">
       Projects
     </dn-divider>
-    <dn-project [images]="projectImageSfr2"></dn-project>
+    <dn-project [images]="projectImagesSfr2" [data]="projectInfoSfr2"></dn-project>
+    <dn-project [images]="projectImagesSfr1" [data]="projectInfoSfr1"></dn-project>
+    <dn-project [images]="projectImagesPortfolio1" [data]="projectInfoPortfolio1"></dn-project>
+    <dn-project [images]="projectImagesAirKoality" [data]="projectInfoAirKoality"></dn-project>
+    <dn-project [images]="projectImagesPokeSurvey" [data]="projectInfoPokeSurvey"></dn-project>
+
+    <dn-divider id="skills">
+      Skills
+    </dn-divider>
+    <dn-skills [skills]="skills"></dn-skills>
+
+    <dn-divider id="contact">
+      Contact
+    </dn-divider>
+    <dn-contact></dn-contact>
   </dn-container>
+
+  <dn-footer></dn-footer>
+  <dn-scroll-to-top></dn-scroll-to-top>
 </main>

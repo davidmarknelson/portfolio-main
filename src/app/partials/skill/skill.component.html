@@ -1,0 +1,12 @@
+<div class="skills" fxLayout="row wrap" fxLayoutAlign="space-evenly">
+  <div fxLayout="column" *ngFor="let skill of skills" fxGap="1rem">
+    <h3>
+      {{skill.title}}
+    </h3>
+    <ul>
+      <li *ngFor="let item of skill.skills">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+</div>

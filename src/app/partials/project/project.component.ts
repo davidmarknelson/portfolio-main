@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { IProjectImage } from 'src/app/shared/types';
+import { IProjectImage, IProjectInfo } from 'src/app/shared/types';
 
 @Component({
   selector: 'dn-project',
@@ -8,4 +8,5 @@ import { IProjectImage } from 'src/app/shared/types';
 })
 export class ProjectComponent {
   @Input() images!: IProjectImage[];
+  @Input() data!: IProjectInfo;
 }

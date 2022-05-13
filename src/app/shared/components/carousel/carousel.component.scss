@@ -68,3 +68,10 @@ img {
   border-radius: $border-radius;
   object-fit: cover;
 }
+
+.expand {
+  min-width: unset !important;
+  position: absolute;
+  right: 1rem;
+  bottom: 2rem;
+}

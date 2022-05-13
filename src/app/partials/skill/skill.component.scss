@@ -1,0 +1,16 @@
+@use "/src/assets/css/core" as *;
+
+.skills {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  color: $color-gray-light;
+  padding: 0;
+  margin: 0;
+
+  & li {
+    margin-bottom: 1rem;
+  }
+}
