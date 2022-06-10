@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { IProjectImage, IProjectInfo } from 'src/app/shared/types';
 
 @Component({
@@ -9,4 +10,5 @@ import { IProjectImage, IProjectInfo } from 'src/app/shared/types';
 export class ProjectComponent {
   @Input() images!: IProjectImage[];
   @Input() data!: IProjectInfo;
+  faArrowUpRightFromSquare = faArrowUpRightFromSquare;
 }

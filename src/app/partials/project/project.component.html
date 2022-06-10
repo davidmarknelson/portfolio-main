@@ -16,8 +16,10 @@
       </ng-container>
     </div>
   </div>
-  <div class="actions" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem">
+  <div class="actions" fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="1rem">
     <a *ngFor="let action of data.actions" [href]="action.href" [attr.aria-label]="action.ariaLabel" target="_blank"
-      dnButton>{{action.text}}</a>
+      dnButton>{{action.text}}
+      <fa-icon [icon]="faArrowUpRightFromSquare"></fa-icon>
+    </a>
   </div>
 </section>
