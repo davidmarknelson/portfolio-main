@@ -54,8 +54,8 @@ export class ImageModalComponent implements AfterViewInit {
         $event.preventDefault();
 
         let pos = this.getCursorPos($event);
-        let x = pos.x;
-        let y = pos.y;
+        const x = pos.x;
+        const y = pos.y;
         let w = this.magnifier.nativeElement.offsetWidth;
         let h = this.magnifier.nativeElement.offsetHeight;
 
@@ -86,13 +86,14 @@ export class ImageModalComponent implements AfterViewInit {
           'top',
           `${top < 0 ? 0 : top}px`
         );
-        // Background Position
+        // Background Position X
         let backgroundX = x * this.zoom - w / 2;
         if (backgroundX < 0) {
           backgroundX = 0;
         } else if (backgroundX > imageWidth * this.zoom - w) {
           backgroundX = imageWidth * this.zoom - w;
         }
+        // Background Position Y
         let backgroundY = y * this.zoom - h / 2;
         if (backgroundY < 0) {
           backgroundY = 0;
