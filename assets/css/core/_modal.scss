@@ -1,0 +1,19 @@
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dn-modal {
+  max-width: 90vw;
+  max-height: 90vh;
+  min-height: 0;
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
